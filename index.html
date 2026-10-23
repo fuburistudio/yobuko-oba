@@ -118,6 +118,13 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 .don-card .price span{font-family:var(--gothic);font-size:11px;color:var(--ink-3);margin-left:4px}
 .don-card p{grid-column:1/-1;font-size:13px;color:var(--ink-2);line-height:1.9;margin-top:6px}
 
+.menu-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);margin-top:clamp(48px,6vw,80px)}
+.menu-gallery figure{margin:0}
+.menu-gallery .ph{aspect-ratio:4/5}
+.menu-gallery .ph::after{display:none}
+.menu-gallery figure:nth-child(2){margin-top:clamp(0px,4vw,56px)}
+.menu-gallery figcaption{margin-top:14px;font-family:var(--mincho);font-size:13px;letter-spacing:.2em;color:var(--ink-2)}
+
 .sub-menu{margin-top:clamp(80px,10vw,140px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,6vw,96px)}
 .sub-photo{aspect-ratio:3/2;margin-bottom:32px}
 .sub-menu h3{font-family:var(--mincho);font-weight:500;font-size:18px;letter-spacing:.4em;padding-bottom:16px;border-bottom:1px solid var(--ink);margin-bottom:24px}
@@ -217,6 +224,11 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
   .don-card:nth-child(odd){border-right:0}
   .don-card{padding:28px 4px 32px}
   .sub-menu{grid-template-columns:minmax(0,1fr)}
+  .menu-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .menu-gallery figure:first-child{grid-column:1/-1}
+  .menu-gallery figure:first-child .ph{aspect-ratio:3/2}
+  .menu-gallery figure:nth-child(2){margin-top:0}
+  .menu-gallery figcaption{font-size:12px;letter-spacing:.1em}
   .pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .pillar:nth-child(even){margin-top:40px}
   .pillar-mark{top:14px;right:12px}
@@ -257,8 +269,8 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 
   <section class="hero">
     <div class="hero-photos">
-      <div class="ph"><img src="images/uni-crop.jpg" alt="箱に並んだ生うに"></div>
-      <div class="ph"><img src="images/sake-sashimi.jpg" alt="鯵の刺身と純米大吟醸" style="object-position:70% 50%"></div>
+      <div class="ph"><img src="images/gm-uni.jpg" alt="箱に並んだ赤うに" style="object-position:50% 85%"></div>
+      <div class="ph"><img src="images/gm-aji.jpg" alt="鯵の刺身"></div>
       <div class="hero-bowl"><img src="images/kaisendon-cut.png" alt="唐津の地魚をのせた特上海鮮丼"></div>
     </div>
     <div class="hero-band">
@@ -312,9 +324,15 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
       <div class="don-card"><small>其の五</small><h3>イカ明太子丼</h3><span class="price">2,400<span>円</span></span><p>呼子のいかと、塩辛すぎない明太子。</p></div>
     </div>
 
+    <div class="menu-gallery">
+      <figure><div class="ph"><img src="images/gm-don-set.jpg" alt="海鮮丼と、うに・いくらの小鉢" loading="lazy"></div><figcaption>海鮮丼と、うに・いくらの小鉢</figcaption></figure>
+      <figure><div class="ph"><img src="images/gm-don.jpg" alt="海鮮丼と地酒" loading="lazy"></div><figcaption>地酒と合わせて</figcaption></figure>
+      <figure><div class="ph"><img src="images/gm-uni.jpg" alt="箱に並んだ赤うに" loading="lazy"></div><figcaption>その日入った、生うに</figcaption></figure>
+    </div>
+
     <div class="sub-menu">
       <div>
-        <div class="sub-photo ph" data-label="PHOTO ― いかの刺身"><img src="images/ika.jpg" alt="いかの刺身と青さ塩" onerror="this.remove()"></div>
+        <div class="sub-photo ph" data-label="PHOTO ― いかの刺身"><img src="images/gm-ika.jpg" alt="いかの刺身と青さ塩" onerror="this.remove()"></div>
         <h3>一品</h3>
         <ul class="dishes">
           <li>いかの活造り 青さ塩で<span>時価</span></li>
@@ -324,7 +342,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
         </ul>
       </div>
       <div>
-        <div class="sub-photo ph" data-label="PHOTO ― 朝のいかと地魚"><img src="images/ika-fish.jpg" alt="揚がったばかりのいかと地魚" onerror="this.remove()"></div>
+        <div class="sub-photo ph" data-label="PHOTO ― 銘酒"><img src="images/gm-sake-bottles.jpg" alt="十四代などの銘酒" onerror="this.remove()"></div>
         <h3>夜のコース<small>完全予約制</small></h3>
         <p class="note">夜は、その日の鮮魚を使った料理と、魚に合わせて選んだ銘酒のペアリングをコースでご用意します。記念日や特別な夜に。</p>
         <p class="note">内容とご予算は、ご予約の際にご相談ください。</p>
@@ -349,7 +367,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
         <p>日本三大朝市、<br>呼子朝市通りの中に。</p>
       </div>
       <div class="pillar">
-        <div class="pillar-photo ph"><img src="images/sake-sashimi.jpg" alt="" loading="lazy"><div class="pillar-mark"><small>究極の</small><b>酒</b></div><span class="pillar-no">肆</span></div>
+        <div class="pillar-photo ph"><img src="images/gm-sake-fridge.jpg" alt="" loading="lazy"><div class="pillar-mark"><small>究極の</small><b>酒</b></div><span class="pillar-no">肆</span></div>
         <p>九州の銘酒を揃えて。<br>土日は店頭で日本酒マルシェ。</p>
       </div>
     </div>
@@ -360,11 +378,11 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
     <span class="space-side" aria-hidden="true">呼子朝市通り</span>
     <div class="sec-head"><span class="sec-num">四</span><span class="bar"></span><h2>店内<span>The shop</span></h2></div>
     <div class="space-grid">
-      <div class="space-a ph" data-label="PHOTO ― 酒棚">
-        <img src="images/sake.jpg" alt="九州の日本酒が並ぶカウンター" onerror="this.remove()">
+      <div class="space-a ph" data-label="PHOTO ― 店の入り口">
+        <img src="images/gm-storefront.jpg" alt="呼子朝市通りにある店の入り口" onerror="this.remove()">
       </div>
-      <div class="space-b ph" data-label="PHOTO ― 地魚">
-        <img src="images/jizakana.jpg" alt="その日に揚がった地魚" onerror="this.remove()">
+      <div class="space-b ph" data-label="PHOTO ― 酒棚">
+        <img src="images/gm-sake-shelf.jpg" alt="カウンターに並ぶ九州の日本酒" onerror="this.remove()">
       </div>
       <div class="space-text">
         <p>朝市通りの入り口から入って左手、建物の少し奥。カウンターとお座敷の小さな店です。お子さま連れも歓迎します。</p>
