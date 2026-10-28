@@ -102,12 +102,13 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 .feature-tag{display:flex;align-items:center;gap:14px;font-family:var(--mincho);font-size:13px;letter-spacing:.3em;color:var(--mute-dark)}
 .feature-tag b{font-weight:500;color:#fff;background:var(--shu);padding:2px 12px;letter-spacing:.2em}
 .feature h3{font-family:var(--mincho);font-weight:600;font-size:clamp(34px,4vw,56px);letter-spacing:.14em;line-height:1.4;margin:18px 0 6px}
-.sizes{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid #5A5750;margin:22px 0 26px}
-.sizes li{display:flex;flex-direction:column;align-items:center;padding:16px 8px 14px;gap:4px}
-.sizes li+li{border-left:1px solid #5A5750}
-.sizes b{font-family:var(--mincho);font-weight:500;font-size:15px;color:#fff;background:var(--shu);width:30px;height:30px;display:grid;place-items:center}
-.sizes span{font-family:var(--latin);font-size:clamp(24px,2.8vw,38px);line-height:1.2;letter-spacing:.02em;white-space:nowrap}
-.sizes small{font-family:var(--mincho);font-size:12px;color:var(--mute-dark);margin-left:4px}
+.sizes{list-style:none;margin:26px 0 28px;border-top:1px solid #3A3833}
+.sizes li{display:flex;align-items:center;gap:18px;padding:14px 2px;border-bottom:1px solid #3A3833}
+.sizes b{font-family:var(--mincho);font-weight:500;font-size:20px;letter-spacing:0;color:var(--paper);display:flex;align-items:baseline;gap:10px;flex:none}
+.sizes b i{font-family:var(--latin);font-style:italic;font-weight:400;font-size:14px;letter-spacing:.1em;color:var(--mute-dark)}
+.sizes li::after{content:"";order:1;flex:1;height:1px;background:linear-gradient(90deg,#5A5750 50%,transparent 0) 0 0/6px 1px repeat-x}
+.sizes span{order:2;font-family:var(--latin);font-size:clamp(24px,2.4vw,32px);line-height:1;letter-spacing:.04em;white-space:nowrap;color:var(--paper)}
+.sizes small{font-family:var(--mincho);font-size:12px;color:var(--mute-dark);margin-left:5px}
 .feature-body > p:last-child{font-family:var(--mincho);font-size:14px;line-height:2.2;color:var(--mute-dark)}
 
 .don-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:clamp(40px,5vw,64px);border-top:1px solid var(--ink)}
@@ -313,9 +314,9 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
         <p class="feature-tag"><b>看板</b>其の一</p>
         <h3>特上海鮮丼</h3>
         <ul class="sizes">
-          <li><b>大</b><span>3,300<small>円</small></span></li>
-          <li><b>中</b><span>2,700<small>円</small></span></li>
-          <li><b>小</b><span>2,300<small>円</small></span></li>
+          <li><b>大<i>L</i></b><span>3,300<small>円</small></span></li>
+          <li><b>中<i>M</i></b><span>2,700<small>円</small></span></li>
+          <li><b>小<i>S</i></b><span>2,300<small>円</small></span></li>
         </ul>
         <p>ネタはその日の仕入れで毎日変わります。<br>サイズによって、ネタの数と種類も変わります。</p>
       </div>
