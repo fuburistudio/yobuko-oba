@@ -137,6 +137,14 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 .dishes li::after{content:"";order:1;flex:1;border-bottom:1px dotted var(--ink-3)}
 .dishes li span{order:2;font-family:var(--latin);font-size:18px;letter-spacing:.02em;color:var(--ink)}
 .sub-menu h3.sub-h{margin-top:40px}
+.courses{list-style:none;margin-bottom:20px}
+.courses li{padding:16px 0 18px;border-bottom:1px solid var(--line)}
+.courses li:first-child{padding-top:4px}
+.c-name{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-family:var(--mincho);font-size:16px;letter-spacing:.06em}
+.c-name span{font-family:var(--latin);font-size:22px;letter-spacing:.02em;white-space:nowrap}
+.c-name small{font-family:var(--mincho);font-size:11px;color:var(--ink-2);margin-left:3px}
+.c-meta{font-size:11px;letter-spacing:.2em;color:var(--shu);margin-top:6px}
+.c-desc{font-family:var(--mincho);font-size:13px;color:var(--ink-2);margin-top:4px;line-height:1.9}
 .sub-menu .note{font-size:13px;color:var(--ink-2);line-height:2.1}
 .sub-menu .note + .note{margin-top:1em}
 
@@ -352,8 +360,13 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
       <div>
         <div class="sub-photo ph" data-label="PHOTO ― 銘酒"><img src="images/gm-sake-bottles.jpg" alt="十四代などの銘酒" onerror="this.remove()"></div>
         <h3>夜のコース<small>完全予約制</small></h3>
-        <p class="note">夜は、その日の鮮魚を使った料理と、魚に合わせて選んだ銘酒のペアリングをコースでご用意します。記念日や特別な夜に。</p>
-        <p class="note">内容とご予算は、ご予約の際にご相談ください。</p>
+        <ul class="courses">
+          <li><p class="c-name">お食事コース<span>8,500<small>円</small></span></p><p class="c-meta">全7品・4〜18名様</p><p class="c-desc">唐津・呼子の地魚を、季節の料理で。</p></li>
+          <li><p class="c-name">地酒ペアリングコース<span>12,000<small>円</small></span></p><p class="c-meta">全7品・4〜18名様</p><p class="c-desc">地魚の料理に、全国の地酒を合わせて。</p></li>
+          <li><p class="c-name">プレミアム地酒ペアリング<span>15,000<small>円</small></span></p><p class="c-meta">全7品・3〜18名様</p><p class="c-desc">十四代・而今・飛露喜などの銘酒とともに。</p></li>
+          <li><p class="c-name">おまかせコース<span>22,000<small>円</small></span></p><p class="c-meta">全7品・2〜12名様</p><p class="c-desc">その日いちばんの、呼子・玄界灘の地魚を。</p></li>
+        </ul>
+        <p class="note">価格はすべて税込です。ご予約はお電話または食べログから。</p>
       </div>
     </div>
   </section>
@@ -420,10 +433,10 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
         <dl class="info">
           <dt>住所</dt><dd>〒847-0303 佐賀県唐津市呼子町呼子3764-30<small>呼子朝市通り内</small></dd>
           <dt>電話</dt><dd>080-4329-8978</dd>
-          <dt>昼</dt><dd>9:30 – 15:00（L.O. 14:30）</dd>
-          <dt>夜</dt><dd>18:00 – 22:00（完全予約制）</dd>
+          <dt>昼</dt><dd>平日 10:00 – 15:00<br>土日祝 9:00 – 15:00</dd>
+          <dt>夜</dt><dd>17:30 – 22:00（完全予約制）</dd>
           <dt>定休</dt><dd>火曜または木曜<small>漁のタイミングにより変わります</small></dd>
-          <dt>席数</dt><dd>カウンター6席・お座敷3席</dd>
+          <dt>席数</dt><dd>17席<small>カウンター5席・お座敷（4名）3卓</small></dd>
           <dt>駐車場</dt><dd>なし<small>近隣の駐車場をご利用ください</small></dd>
         </dl>
         <div class="map">
