@@ -125,6 +125,8 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 .menu-gallery figure{margin:0}
 .menu-gallery .ph{aspect-ratio:4/5}
 .menu-gallery .ph::after{display:none}
+.menu-gallery .ph-cut{background:var(--ink)}
+.menu-gallery .ph-cut img{object-fit:contain;padding:6%;filter:drop-shadow(0 16px 28px rgba(0,0,0,.5))}
 .menu-gallery figure:nth-child(2){margin-top:clamp(0px,4vw,56px)}
 .menu-gallery figcaption{margin-top:14px;font-family:var(--mincho);font-size:13px;letter-spacing:.2em;color:var(--ink-2)}
 
@@ -221,7 +223,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
   .hd .logo{width:62px;height:62px;font-size:18px}
   .hero{min-height:600px}
   .hero-photos{grid-template-columns:1fr;grid-template-rows:1fr 1fr}
-  .hero-bowl{height:76%;width:108%;bottom:-5%}
+  .hero-bowl{height:62%;width:94%;bottom:-4%}
   .hero-band h1{font-size:calc((100vw - 2 * var(--gutter)) / 9.4)}
   .hero-band p{flex-direction:column;align-items:center;gap:2px;letter-spacing:.25em}
   .sec-head{gap:16px}
@@ -283,7 +285,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
     <div class="hero-photos">
       <div class="ph"><img src="images/gm-uni.jpg" alt="箱に並んだ赤うに" style="object-position:50% 85%"></div>
       <div class="ph"><img src="images/gm-aji.jpg" alt="鯵の刺身"></div>
-      <div class="hero-bowl"><img src="images/kaisendon-cut.png" alt="唐津の地魚をのせた特上海鮮丼"></div>
+      <div class="hero-bowl"><img src="images/tokujo-cut.webp" alt="鯖・鯛・マグロ・炙りトロなどをのせた特上海鮮丼"></div>
     </div>
     <div class="hero-band">
       <h1>呼子の海を、丼に。</h1>
@@ -316,7 +318,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
     <article class="feature">
       <div class="feature-visual">
         <span class="wave" aria-hidden="true"></span>
-        <div class="feature-bowl"><img src="images/kaisendon-cut.png" alt="特上海鮮丼" loading="lazy"></div>
+        <div class="feature-bowl"><img src="images/tokujo-cut.webp" alt="特上海鮮丼" loading="lazy"></div>
       </div>
       <div class="feature-body">
         <p class="feature-tag"><b>看板</b>其の一</p>
@@ -339,7 +341,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 
     <div class="menu-gallery">
       <figure><div class="ph"><img src="images/gm-don-set.jpg" alt="海鮮丼と、うに・いくらの小鉢" loading="lazy"></div><figcaption>海鮮丼と、うに・いくらの小鉢</figcaption></figure>
-      <figure><div class="ph"><img src="images/gm-don.jpg" alt="海鮮丼と地酒" loading="lazy"></div><figcaption>地酒と合わせて</figcaption></figure>
+      <figure><div class="ph ph-cut"><img src="images/maguro-cut.webp" alt="赤身・中トロ・炙り・ねぎとろをのせた本マグロ丼" loading="lazy"></div><figcaption>本マグロ丼</figcaption></figure>
       <figure><div class="ph"><img src="images/gm-uni.jpg" alt="箱に並んだ赤うに" loading="lazy"></div><figcaption>その日入った、生うに</figcaption></figure>
     </div>
 
@@ -376,7 +378,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
     <div class="sec-head"><span class="sec-num">三</span><span class="bar"></span><h2>究極<span>Our promise</span></h2></div>
     <div class="pillar-grid">
       <div class="pillar">
-        <div class="pillar-photo ph"><img src="images/kaisendon.jpg" alt="" loading="lazy"><div class="pillar-mark"><small>究極の</small><b>丼</b></div><span class="pillar-no">壱</span></div>
+        <div class="pillar-photo ph"><img src="images/tokujo.jpg" alt="" loading="lazy"><div class="pillar-mark"><small>究極の</small><b>丼</b></div><span class="pillar-no">壱</span></div>
         <p>厚切りのネタを、<br>惜しみなく重ねて。</p>
       </div>
       <div class="pillar">
