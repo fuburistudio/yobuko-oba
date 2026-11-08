@@ -133,6 +133,9 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 
 .sub-menu{margin-top:clamp(80px,10vw,140px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,6vw,96px)}
 .sub-photo{aspect-ratio:3/2;margin-bottom:32px}
+.sub-duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px}
+.sub-duo .ph{aspect-ratio:1}
+.sub-duo .ph::after{display:none}
 .sub-menu h3{font-family:var(--mincho);font-weight:500;font-size:18px;letter-spacing:.4em;padding-bottom:16px;border-bottom:1px solid var(--ink);margin-bottom:24px}
 .sub-menu h3 small{font-family:var(--gothic);font-size:11px;letter-spacing:.2em;color:var(--shu);margin-left:14px}
 .dishes{list-style:none}
@@ -348,7 +351,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 
     <div class="sub-menu">
       <div>
-        <div class="sub-photo ph" data-label="PHOTO ― いかの刺身"><img src="images/gm-ika.jpg" alt="いかの刺身と青さ塩" onerror="this.remove()"></div>
+        <div class="sub-duo"><div class="ph"><img src="images/ika-sashimi.jpg" alt="呼子のイカ刺し" loading="lazy"></div><div class="ph"><img src="images/ika-bowl.jpg" alt="呼子のイカ刺し" loading="lazy"></div></div>
         <h3>一品</h3>
         <ul class="dishes">
           <li>呼子のイカ刺し<span>2,000円</span></li>
@@ -356,8 +359,9 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
           <li>ゲソ甘露醤油炙り<span>700円</span></li>
         </ul>
         <h3 class="sub-h">定食</h3>
+        <div class="sub-photo ph"><img src="images/nitsuke.jpg" alt="その日の魚の煮付け定食" loading="lazy"></div>
         <ul class="dishes">
-          <li>煮付け定食<span>2,700円</span></li>
+          <li>本日の煮付け定食<span>2,700円</span></li>
         </ul>
       </div>
       <div>
