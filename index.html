@@ -121,14 +121,15 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 .don-card .price{font-family:var(--latin);font-size:30px;letter-spacing:.02em}
 .don-card .price span{font-family:var(--gothic);font-size:11px;color:var(--ink-3);margin-left:4px}
 .don-card p{grid-column:1/-1;font-size:13px;color:var(--ink-2);line-height:1.9;margin-top:6px}
+.don-card.has-img{grid-template-columns:minmax(0,1fr) auto clamp(104px,12vw,168px)}
+.don-card.has-img small,.don-card.has-img p{grid-column:1/3}
+.don-img{grid-column:3;grid-row:1/4;align-self:center;width:100%;height:auto;filter:drop-shadow(0 12px 18px rgba(26,26,26,.28))}
 
-.menu-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);margin-top:clamp(48px,6vw,80px)}
+.menu-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,24px);margin-top:clamp(48px,6vw,80px)}
 .menu-gallery figure{margin:0}
 .menu-gallery .ph{aspect-ratio:4/5}
 .menu-gallery .ph::after{display:none}
-.menu-gallery .ph-cut{background:var(--ink)}
-.menu-gallery .ph-cut img{object-fit:contain;padding:6%;filter:drop-shadow(0 16px 28px rgba(0,0,0,.5))}
-.menu-gallery figure:nth-child(even){margin-top:clamp(0px,4vw,56px)}
+.menu-gallery figure:nth-child(2){margin-top:clamp(0px,4vw,56px)}
 .menu-gallery figcaption{margin-top:14px;font-family:var(--mincho);font-size:13px;letter-spacing:.2em;color:var(--ink-2)}
 
 .sub-menu{margin-top:clamp(80px,10vw,140px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,6vw,96px)}
@@ -139,6 +140,8 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 .dishes li{display:flex;align-items:baseline;gap:12px;padding:8px 0;font-family:var(--mincho);font-size:15px}
 .dishes li::after{content:"";order:1;flex:1;border-bottom:1px dotted var(--ink-3)}
 .dishes li span{order:2;font-family:var(--latin);font-size:18px;letter-spacing:.02em;color:var(--ink)}
+.dishes li.has-img{align-items:center;padding:6px 0 10px}
+.dishes li img{order:-1;flex:none;width:clamp(96px,10vw,132px);height:auto;margin-right:8px;filter:drop-shadow(0 10px 14px rgba(26,26,26,.25))}
 .sub-menu h3.sub-h{margin-top:40px}
 .courses{list-style:none;margin-bottom:20px}
 .courses li{padding:16px 0 18px;border-bottom:1px solid var(--line)}
@@ -238,9 +241,16 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
   .don-grid{grid-template-columns:minmax(0,1fr)}
   .don-card:nth-child(odd){border-right:0}
   .don-card{padding:28px 4px 32px}
+  .don-card.has-img{grid-template-columns:minmax(0,1fr) 108px;gap:6px 16px}
+  .don-card.has-img small{grid-column:1}
+  .don-card.has-img .price{grid-column:1;grid-row:3}
+  .don-card.has-img p{grid-column:1/-1;grid-row:4}
+  .don-img{grid-column:2;grid-row:1/4}
   .sub-menu{grid-template-columns:minmax(0,1fr)}
   .menu-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .menu-gallery figure:nth-child(even){margin-top:24px}
+  .menu-gallery figure:first-child{grid-column:1/-1}
+  .menu-gallery figure:first-child .ph{aspect-ratio:3/2}
+  .menu-gallery figure:nth-child(2){margin-top:0}
   .menu-gallery figcaption{font-size:12px;letter-spacing:.1em}
   .pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .pillar:nth-child(even){margin-top:40px}
@@ -334,30 +344,27 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
     <div class="don-grid">
       <div class="don-card"><small>其の二</small><h3>海鮮丼プレミアム</h3><span class="price">4,800<span>円</span></span><p>海鮮丼に、うにをのせて。</p></div>
       <div class="don-card"><small>其の三</small><h3>生うに丼</h3><span class="price">4,800<span>円</span></span><p>とろけるように濃厚な生うにを、一面に。</p></div>
-      <div class="don-card"><small>其の四</small><h3>本マグロ丼</h3><span class="price">2,700<span>円</span></span><p>本マグロを、たっぷりと。</p></div>
-      <div class="don-card"><small>其の五</small><h3>イカ明太子丼</h3><span class="price">2,400<span>円</span></span><p>呼子のいかと、塩辛すぎない明太子。</p></div>
+      <div class="don-card has-img"><small>其の四</small><h3>本マグロ丼</h3><span class="price">2,700<span>円</span></span><p>本マグロを、たっぷりと。</p><img class="don-img" src="images/maguro-cut.webp" alt="赤身・中トロ・炙り・ねぎとろをのせた本マグロ丼" loading="lazy"></div>
+      <div class="don-card has-img"><small>其の五</small><h3>イカ明太子丼</h3><span class="price">2,400<span>円</span></span><p>呼子のいかと、塩辛すぎない明太子。</p><img class="don-img" src="images/ika-don-cut.webp" alt="呼子のいかと明太子をのせたイカ明太子丼" loading="lazy"></div>
     </div>
 
     <div class="menu-gallery">
       <figure><div class="ph"><img src="images/gm-don-set.jpg" alt="海鮮丼と、うに・いくらの小鉢" loading="lazy"></div><figcaption>海鮮丼と、うに・いくらの小鉢</figcaption></figure>
-      <figure><div class="ph ph-cut"><img src="images/maguro-cut.webp" alt="赤身・中トロ・炙り・ねぎとろをのせた本マグロ丼" loading="lazy"></div><figcaption>本マグロ丼</figcaption></figure>
-      <figure><div class="ph"><img src="images/ika-bowl.jpg" alt="呼子のいかと明太子をのせたイカ明太子丼" loading="lazy"></div><figcaption>イカ明太子丼</figcaption></figure>
+      <figure><div class="ph"><img src="images/gm-don.jpg" alt="海鮮丼と地酒" loading="lazy"></div><figcaption>地酒と合わせて</figcaption></figure>
       <figure><div class="ph"><img src="images/gm-uni.jpg" alt="箱に並んだ赤うに" loading="lazy"></div><figcaption>その日入った、生うに</figcaption></figure>
     </div>
 
     <div class="sub-menu">
       <div>
-        <div class="sub-photo ph"><img src="images/ika-sashimi.jpg" alt="呼子のイカ刺し" loading="lazy"></div>
         <h3>一品</h3>
         <ul class="dishes">
-          <li>呼子のイカ刺し<span>2,000円</span></li>
+          <li class="has-img"><img src="images/ika-sashimi-cut.webp" alt="呼子のイカ刺し" loading="lazy">呼子のイカ刺し<span>2,000円</span></li>
           <li>刺身皿<span>2,200円</span></li>
           <li>ゲソ甘露醤油炙り<span>700円</span></li>
         </ul>
         <h3 class="sub-h">定食</h3>
-        <div class="sub-photo ph"><img src="images/nitsuke.jpg" alt="その日の魚の煮付け定食" loading="lazy"></div>
         <ul class="dishes">
-          <li>本日の煮付け定食<span>2,700円</span></li>
+          <li class="has-img"><img src="images/nitsuke-cut.webp" alt="その日の魚の煮付け定食" loading="lazy">本日の煮付け定食<span>2,700円</span></li>
         </ul>
       </div>
       <div>
