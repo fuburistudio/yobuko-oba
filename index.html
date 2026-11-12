@@ -211,6 +211,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 .reserve .sec-head h2 span{color:#8C877D}
 .reserve-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,120px)}
 .reserve-lead{font-family:var(--mincho);font-size:var(--fs-5);line-height:2;letter-spacing:.2em}
+.reserve-lead span{display:block;white-space:nowrap}
 .reserve-tel{display:inline-flex;align-items:baseline;gap:16px;margin-top:32px;font-family:var(--latin);font-size:var(--fs-6);letter-spacing:.04em;line-height:1;border-bottom:1px solid #5A5750;padding-bottom:12px}
 .reserve-tel small{font-family:var(--mincho);font-size:var(--fs-2);letter-spacing:.3em;color:var(--mute-dark)}
 .reserve-tel:hover{border-color:var(--shu)}
@@ -293,6 +294,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
   .space-text{margin-top:32px}
   .space-side{display:none}
   .reserve-grid{grid-template-columns:minmax(0,1fr)}
+  .reserve-lead{font-size:calc((100vw - 2 * var(--gutter)) / 14.6);letter-spacing:.1em}
   .btn{width:100%}
   .info dt{padding-right:20px}
   .ft{padding-bottom:110px}
@@ -322,7 +324,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 
   <section class="hero">
     <div class="hero-photos">
-      <div class="ph"><img src="images/hero-market.jpg" alt="" fetchpriority="high"></div>
+      <div class="ph"><img src="images/hero-katsuo.jpg" alt="" fetchpriority="high"></div>
       <div class="hero-bowl"><img src="images/tokujo-cut.webp" alt="鯖・鯛・マグロ・炙りトロなどをのせた特上海鮮丼"></div>
     </div>
     <div class="hero-band">
@@ -468,7 +470,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
     <div class="sec-head"><span class="sec-num">五</span><span class="bar"></span><h2>ご予約<span>Reservation</span></h2></div>
     <div class="reserve-grid">
       <div>
-        <p class="reserve-lead">昼は、ふらりとどうぞ。<br>夜は、ご予約のお客様だけ。</p>
+        <p class="reserve-lead"><span>昼は、ふらりとどうぞ。</span><span>夜は、ご予約のお客様だけ。</span></p>
         <a href="tel:08043298978" class="reserve-tel"><small>お電話</small>080-4329-8978</a>
         <p class="reserve-note">お昼の海鮮丼は予約なしでご利用いただけます。ネタがなくなり次第終了します。定休日は漁の具合で変わるため、Instagramでお知らせしています。</p>
         <div class="cta">
