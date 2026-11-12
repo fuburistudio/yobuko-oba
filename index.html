@@ -75,7 +75,7 @@ body::after{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;opa
 .hero{height:100svh;min-height:560px;display:flex;flex-direction:column;padding:0;background:var(--ink);overflow:hidden}
 .hero-photos{flex:1;min-height:0;position:relative;display:grid;grid-template-columns:1fr}
 .hero-photos > .ph{height:100%;background:#2A2925}
-.hero-photos > .ph img{filter:brightness(.62) saturate(.9)}
+.hero-photos > .ph img{filter:brightness(.85) saturate(1)}
 .hero-photos > .ph::after{display:none}
 /* 切り抜いた丼。いちばん手前に置き、写真で切れている下端は黒い帯に溶かして隠す */
 .hero-bowl{position:absolute;left:50%;bottom:-5%;height:88%;width:84%;transform:translateX(-50%);z-index:4;filter:drop-shadow(0 0 40px rgba(0,0,0,.55)) drop-shadow(0 -6px 24px rgba(0,0,0,.35))}
@@ -324,7 +324,7 @@ section:not(.hero) > *:not(.wm):not(.space-side){position:relative;z-index:1}
 
   <section class="hero">
     <div class="hero-photos">
-      <div class="ph"><img src="images/hero-wood.jpg" alt="" fetchpriority="high"></div>
+      <div class="ph"><img src="images/hero-sea.jpg" alt="" fetchpriority="high"></div>
       <div class="hero-bowl"><img src="images/tokujo-cut.webp" alt="鯖・鯛・マグロ・炙りトロなどをのせた特上海鮮丼"></div>
     </div>
     <div class="hero-band">
